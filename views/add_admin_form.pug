@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1(style='text-align:center')= title
+
+  div(class='container')
+    form(action='' method='POST')
+      div(class='form-group')
+        label(for='username') Admin Name
+        input#username.form-control(type='text' name='username' placeholder='Enter userName' required='true')
+        br
+        label(for='password') Admin Password
+        input#password.form-control(type='text' name='password' placeholder='Enter password' required='true')
+        br
+      button.btn.btn-primary.btn-success(type='submit') Add Admin

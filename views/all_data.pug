@@ -1,0 +1,23 @@
+extends admin_layout
+
+block content
+
+  h1(style='text-align:center')= title
+
+  div(class='container')
+    table(class='table table-striped')
+      thead
+        tr
+          th #[strong Auxilliary]
+          th #[strong Aggregate]
+          th #[strong Status]
+      tbody
+        each item in data
+          tr
+            td #{item.auxilliary}
+            td #{item.aggregate}
+            td(style=`background-color: ${item.auxilliary > minAngle | item.aggregate > minAngle ? "red" : "green"}`)
+    br
+    br
+    button.btn.btn-danger(type='button') #[a(href=`/admin/clear-data` style='color: white') Clear All Data]
+    

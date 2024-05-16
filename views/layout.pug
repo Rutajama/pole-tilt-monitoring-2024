@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    
+    style(type='text/css').
+      .button-on {
+        //- background-color: green;
+        color: green;
+        border-radius: 20px;
+        padding: 5px;
+        border: none;
+      }
+      .button-off {
+        //- background-color: red;
+        color: red;
+        border-radius: 20px;
+        padding: 5px;
+        border: none;
+      }
+
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js")
+    
+  body
+    nav(class='navbar navbar-inverse')
+      div(class='container-fluid')
+        div(class='navbar-header')
+          a(class='navbar-brand' href='/') Pole Tilt Monitoring
+          
+    block content
+

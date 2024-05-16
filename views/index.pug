@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1(style='text-align:center')= title
+  div(class='container')
+    ul(class='pager')
+      li #[a(href='/user/login') #[button.btn.btn-success(type='button') User Login]]
+      li #[a(href='/admin/login') #[button.btn.btn-success(type='button') Admin Login]]
+  

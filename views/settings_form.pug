@@ -1,0 +1,13 @@
+extends admin_layout
+
+block content
+  h1(style='text-align:center')= title
+
+  div(class='container')
+    form(action='' method='POST')
+      div(class='form-group')
+        label(for='username') Minimum Tilt Angle:
+        input#username.form-control(type='text' name='angle' placeholder='Enter minimum tilt angle' required='true')
+        
+        br
+      button.btn.btn-primary.btn-success(type='submit') Submit
